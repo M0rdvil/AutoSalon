@@ -1,0 +1,312 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap");
+*{
+    box-sizing: border-box;
+    padding:0;
+    margin:0;
+}
+body
+{
+    font-family: sans-serif;
+    color:black;
+}
+nav,
+.content-container,
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+/*-----------Навигация-----------*/
+.content
+{
+    max-width: 1250px;
+    margin:auto;
+    padding:0px 30px;
+    
+}
+.navbar
+{
+    position:fixed;
+    z-index:10000;
+    width:100%;
+    padding:1em;
+    background: white;
+    box-shadow: 0 1px 10px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+.navbar .content
+{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+#logo
+{
+    width:70px;
+    transition:0.3s;
+}
+#logo:hover
+{
+    transform: scale(1.2);
+}
+.navbar .menu-list{
+    display:inline-flex;
+}
+.menu-list li{
+    list-style: none;
+}
+.menu-list li a{
+    color:rgb(0, 0, 0);
+    font-size:18px;
+    font-weight: 300;
+    margin-left:25px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+.menu-list li a:hover{
+    color: rgb(78, 11, 11);
+    cursor: pointer;
+}
+.icon{
+    color:black;
+    font-size:20px;
+    cursor:pointer;
+    display:none;
+}
+.icon.cancel-btn{
+    position:absolute;
+    right:30px;
+    top:20px;
+}
+.navbar.sticky .icon.cancel-btn{
+    top:10px;
+}
+
+/*-------------card-------------*/
+
+#carlist{
+    text-align: center;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    min-height: 100vh;
+    margin-top:0px;
+    margin-bottom:30px;
+    min-height: 300%;
+
+}
+#carlist h1{
+    
+    font-size:40px;
+    font-weight:500;
+    color:black;
+    margin-bottom:10px;
+    width:100%;
+    margin-top: 100px;
+}
+#carlist .container{
+    width:100%;
+    height: auto;
+    margin: 0 auto;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding:20px;
+    gap:20px;
+    position: relative;
+    flex-wrap: wrap;
+}
+#carlist .car-card {
+    
+    margin: 10px 5px;
+    position: relative;
+    background: white;
+    width: 400px;
+    height: auto;
+    color: black;
+    text-align: center;
+    overflow: hidden;
+    border: 1px solid rgba(136, 138, 148, 0.3);
+    border-radius: 10px;
+    box-sizing: border-box;
+    transition: 0.5s;
+    padding: 0 5px;
+}
+#carlist .car-card h2{
+    font-size: 25px;
+    color: rgb(18, 21, 42);
+    font-weight: 600;
+}
+#carlist .car-card p{
+    color: rgb(18,21,42);
+    margin: 10px 10px 20px 10px;
+    font-weight: 400;
+}
+#carlist .car-image{
+    margin-bottom: 5px;
+    width: auto;
+}
+#carlist .car-image img{
+    height: 135px;
+    width: 100%;
+    margin: 20px 0;
+    object-fit: contain;
+}
+#carlist .car-page-button{
+    margin-bottom: 25px;
+}
+/* #carlist .car-card:nth-child(2) .car-page-button,
+#carlist .car-card:nth-child(3) .car-page-button{
+    margin-top: 57px;
+} */
+#carlist .car-page-button a{
+    cursor: pointer;
+    background: rgb(158, 158, 158);
+    border-radius: 30px;
+    padding: 10px 10px;
+    color: white;
+    text-decoration: none;
+}
+.car-card:hover{
+    transform: scale(1.05);
+}
+
+/*--------------footer--------------*/
+footer{
+    position:relative;
+    width:100%;
+    height:auto;
+    z-index:999;
+    background:rgb(51, 51, 51);
+    padding: 2em 2em 4em 3em;
+    color:white;
+}
+footer .container
+{
+    width:100%;
+    display:grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    grid-gap:2em;
+}
+footer .aboutus a{
+    color:rgb(136,138, 148);
+    transition:0.5s;
+}
+footer .aboutus a:hover{
+    color:#2360d1;
+}
+footer .container h2{
+    font-weight: 400;
+    margin-bottom: 1em;
+}
+footer .container .socials
+{
+    margin-top:2em;
+    display:grid;
+    grid-template-columns: repeat(4,52px);
+    grid-gap:10px;
+}
+footer .container .socials li
+{
+    list-style: none;
+}
+footer .container .socials li a
+{
+    color:white;
+    display:inline-block;
+    width:50px;
+    height:50px;
+    background: rgb(136, 138, 148);
+    border-radius:5px;
+    display:grid;
+    align-content: center;
+    justify-content:center;
+    transition:0.5s;
+}
+footer .container .socials li a:hover
+{
+    background:#2360d1;
+}
+footer li{
+    list-style: none;
+    margin-bottom: 0.7em;
+}
+footer li a
+{
+    color:rgb(136,138, 148);
+    display: inline-block;
+    transition:0.5s;
+    text-decoration: none;
+}
+footer li a:hover
+{
+    color:#2360d1;
+}
+.info li{
+    display:grid;
+    grid-template-columns: 30px 1fr;
+    list-style: none;
+}
+
+@media (max-width: 1024px){
+    footer{
+        padding: 40px;
+    }
+    footer .container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .advantage-card__text{
+        font-size: 22px;
+        line-height: 26px;
+    }
+}
+@media (max-width: 768px){
+    footer .container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    body.disabled{
+        overflow: hidden;
+    }
+    .icon{
+        display: block;
+    }
+    .icon.hide{
+        display: none;
+    }
+    .navbar .menu-list{
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0px;
+        display: block;
+        padding: 40px 0;
+        text-align: center;
+        background: white;
+        transition: all 0.3s ease;
+    }
+    .navbar.show .menu-list{
+        left: 0%;
+    }
+    .navbar .menu-list li{
+        margin-top: 45px;
+    }
+    .navbar .menu-list li a{
+        font-size: 23px;
+        margin-left: -100%;
+        transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+    .navbar.show .menu-list li a{
+        margin-left: 0px;
+    }
+    .advantage-card__text{
+        font-size: 18px;
+        line-height: 22px;
+    }
+}

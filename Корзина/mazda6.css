@@ -1,0 +1,519 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;700&family=Roboto:ital,wght@0,100;1,100&display=swap');
+@import url("https://fonts.google.com/share?selection.family=Oswald:wght@200;400;700%7CRoboto:ital,wght@0,100;1,100");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap");
+*{
+    box-sizing: border-box;
+    padding:0;
+    margin:0;
+}
+body
+{
+    font-family: sans-serif;
+    color:black;
+}
+nav,
+.content-container,
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+/*-----------Навигация-----------*/
+.content
+{
+    max-width: 1250px;
+    margin:auto;
+    padding:0px 30px;
+}
+.navbar
+{
+    position:fixed;
+    z-index:1000;
+    width:100%;
+    padding:1em;
+    background: rgb(0, 0, 0);
+    box-shadow: 0 1px 10px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+.navbar .content
+{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+#logo
+{
+    width:70px;
+    transition:0.3s;
+}
+#logo:hover
+{
+    transform: scale(1.2);
+}
+.navbar .menu-list{
+    display:inline-flex;
+    margin-top: -1px;
+}
+.menu-list li{
+    list-style: none;
+}
+.menu-list li a{
+    color:rgb(255, 255, 255);
+    font-size:18px;
+    font-weight: 300;
+    margin-left:25px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+.menu-list li a:hover{
+    color: rgb(228, 0, 0);
+    cursor: pointer;
+}
+.icon{
+    color:rgb(255, 255, 255);
+    font-size:20px;
+    cursor:pointer;
+    display:none;
+}
+.icon.cancel-btn{
+    position:absolute;
+    right:30px;
+    top:20px;
+}
+.navbar.sticky .icon.cancel-btn{
+    top:10px;
+}
+
+
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Контейнер для слайд-шоу */
+.slideshow-container {
+  position: relative;
+  margin: auto;
+  top:78px;
+  width:100%;
+  margin-bottom:50px;
+ 
+}
+
+/* Кнопки "Далее" и "предыдущий" */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Расположение "следующую кнопку" справа */
+.next {
+    
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev{
+    left:0;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.container_main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:50%;
+    position: relative;
+    margin-top:-52px;
+  
+}
+
+
+
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+
+.main{
+    position:relative;
+    width:100%;
+    height:auto;
+    z-index:999;
+    padding: 40px;
+}
+.slideshow-container{
+    width:100%;
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap:2em;
+}
+.data img{
+    height:30px;
+    width:auto;
+}
+
+.data{
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-content:space-between;
+    width:50%;
+
+}
+.data .heading{
+    display:flex;
+    justify-content:center;
+    
+}
+.data .car-page
+{
+    display:flex;
+    flex-direction: row;
+    height:50%;
+    align-items:center;
+    justify-content:space-around;
+    flex-wrap: wrap;
+}
+
+.data .car-page .car-page-1
+{
+    /* height:50px; */
+    width:125px;
+    height:90px;
+    /* display:flex; */
+    /* justify-content:center; */
+    /* flex-direction: column; */
+    text-align: center;
+    border:2px solid rgb(194, 194, 194);
+    padding:10px 0;
+    border-radius: 10px;
+    transition: .4s;
+}
+
+.data .car-page .car-page-1:nth-child(4)
+{
+    padding:20px;
+}
+
+.data .car-page .car-page-1:hover{
+    transform:scale(1.2)
+}
+
+.data .text p{
+    padding:0 10px;
+    text-align:center;
+    margin-top:20px;
+    font-family: 'Oswald', sans-serif;
+}
+
+.price{
+    /* width:30;
+    height:auto; */
+}
+
+
+.vig{
+    
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-content:space-between;
+    width:50%;
+   
+    position: relative;
+    padding:0 10px;
+    text-align: center;
+    height:auto;
+    
+    
+    font-family: 'Oswald', sans-serif;
+}
+
+.vig ul{
+    list-style: none;
+}
+
+
+.price{
+    width:100%;
+}
+.label{
+    font-size: 130%;
+    font-weight: 400;
+    margin-left:30%;
+    display:flex;
+    margin-top:-20%;
+}
+
+.pr{
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-content:space-between;
+    width:50%;
+    position: relative;
+    padding:0 10px;
+    text-align: center;
+    height:auto;
+    font-family: 'Oswald', sans-serif;
+}
+.pr .buy-n-testdrive{
+ 
+    display:flex;
+    flex-direction: row;
+   
+    align-items:center;
+    justify-content:space-around;
+    flex-wrap: wrap;
+}
+
+.buy, .testdrive{
+    position: relative;
+    text-align: center;
+    border:2px solid rgb(194, 194, 194);
+    transition: .4s;
+    color:rgb(0, 0, 0);
+    width: 130%;
+    padding:15px 20px;
+    margin-bottom:20px;
+    font-weight: 400;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 15px;
+    text-decoration: none;
+    width: 100%;
+}
+
+.buy:hover, .testdrive:hover{
+    
+    background-color:rgb(121, 121, 121);
+}
+.buy-n-testdrive .buy, .testdrive{
+    width:100%;
+}
+
+
+
+
+
+
+
+footer{
+    position:relative;
+    width:100%;
+    height:auto;
+    z-index:999;
+    background:rgb(0, 0, 0);
+    padding: 2em 2em 4em 3em;
+    color:white;
+}
+footer .container
+{
+    width:100%;
+    display:grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    grid-gap:2em;
+}
+footer .aboutus a{
+    color:rgb(136,138, 148);
+    transition:0.5s;
+}
+footer .aboutus a:hover{
+    color:#ffffff;
+}
+footer .container h2{
+    font-weight: 400;
+    margin-bottom: 1em;
+}
+footer .container .socials
+{
+    margin-top:2em;
+    display:grid;
+    grid-template-columns: repeat(4,52px);
+    grid-gap:10px;
+}
+footer .container .socials li
+{
+    list-style: none;
+}
+footer .container .socials li a
+{
+    color:white;
+    display:inline-block;
+    width:50px;
+    height:50px;
+    background: rgb(0, 0, 0);
+    border-radius:50%;
+    display:grid;
+    align-content: center;
+    justify-content:center;
+    transition:0.5s;
+}
+footer .container .socials li a:hover
+{
+    background:#a50000;
+}
+footer li{
+    list-style: none;
+    margin-bottom: 0.7em;
+}
+footer li a
+{
+    color:rgb(136,138, 148);
+    display: inline-block;
+    transition:0.5s;
+    text-decoration: none;
+}
+footer li a:hover
+{
+    color:#ffffff;
+}
+.info li{
+    display:grid;
+    grid-template-columns: 30px 1fr;
+    list-style: none;
+}
+
+@media (max-width: 1024px){
+    footer{
+        padding: 40px;
+        width:100%;
+        height:auto;
+    }
+    footer .container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .advantage-card__text{
+        font-size: 22px;
+        line-height: 26px;
+    }
+    .vig{
+
+    }
+    .pr{
+    }
+    
+    .container_main{
+        margin-top:10px;
+    }
+}
+@media (max-width: 768px){
+    .slideshow-container{
+        max-width:720px;
+        flex-direction:column;
+    }
+    footer{
+        padding: 40px;
+        width:100%;
+        height:auto;
+    }
+    footer .container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .advantage-card__text{
+        font-size: 22px;
+        line-height: 26px;
+    }
+    body.disabled{
+        overflow: hidden;
+    }
+    .icon{
+        display: block;
+    }
+    .icon.hide{
+        display: none;
+    }
+    .navbar .menu-list{
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0px;
+        display: block;
+        padding: 40px 0;
+        text-align: center;
+        background: rgb(0, 0, 0);
+        transition: all 0.3s ease;
+    }
+    .navbar.show .menu-list{
+        left: 0%;
+    }
+    .navbar .menu-list li{
+        margin-top: 45px;
+    }
+    .navbar .menu-list li a{
+        font-size: 23px;
+        margin-left: -100%;
+        transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+    .navbar.show .menu-list li a{
+        margin-left: 0px;
+    }
+    .advantage-card__text{
+        font-size: 18px;
+        line-height: 22px;
+    }
+}
+@media (min-width: 768px){
+    
+    .slideshow-container .slide .slide-text h1{
+        font-size: 42px;
+        line-height: 42px;
+        margin: 20px 0;
+    }
+    .slideshow-container .slide .slide-text p{
+        font-size: 18px;
+    }
+ 
+    
+}
+@media (min-width: 1024px){
+    .slideshow-container .slide .slide-text h1{
+        font-size: 55px;
+        line-height: 60px;
+        margin: 24px 0;
+    }
+    .slideshow-container .slide .slide-text p{
+        font-size: 20px;
+    }
+    #advantages h1,
+    #carlist h1{
+        font-size: 64px;
+    }
+}

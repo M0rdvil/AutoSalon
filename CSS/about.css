@@ -1,0 +1,263 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap");
+*{
+    box-sizing: border-box;
+    padding:0;
+    margin:0;
+}
+body
+{
+    font-family: sans-serif;
+    color:black;
+}
+nav,
+.content-container,
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+/*-----------Навигация-----------*/
+.content
+{
+    max-width: 1250px;
+    margin:auto;
+    padding:0px 30px;
+}
+.navbar
+{
+    position:fixed;
+    z-index:1000;
+    width:100%;
+    padding:1em;
+    background: rgb(0, 0, 0);
+    box-shadow: 0 1px 10px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+.navbar .content
+{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+#logo
+{
+    width:70px;
+    transition:0.3s;
+}
+#logo:hover
+{
+    transform: scale(1.2);
+}
+.navbar .menu-list{
+    display:inline-flex;
+    margin-top: -1px;
+}
+.menu-list li{
+    list-style: none;
+}
+.menu-list li a{
+    color:rgb(255, 255, 255);
+    font-size:18px;
+    font-weight: 300;
+    margin-left:25px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+.menu-list li a:hover{
+    color: rgb(228, 0, 0);
+    cursor: pointer;
+}
+.icon{
+    color:rgb(255, 255, 255);
+    font-size:20px;
+    cursor:pointer;
+    display:none;
+}
+.icon.cancel-btn{
+    position:absolute;
+    right:30px;
+    top:20px;
+}
+.navbar.sticky .icon.cancel-btn{
+    top:10px;
+}
+
+/*--------------about--------------*/
+a{
+    text-decoration:none;
+    color:black;
+}
+section{
+    width:100%;
+    min-height: 100vh;
+    padding-top:110px;
+    color:rgb(0, 0, 0)
+}
+.container{
+    position: relative;
+    width:75%;
+    margin: 0 auto;
+}
+.container .title{
+    text-align: center;
+    font-size:30px;
+    margin-bottom:30px;
+}
+.container .title1{
+    text-align: center;
+    font-size:30px;
+    margin-bottom:30px;
+}
+
+.container .text{
+    font-size:20px;
+    margin-bottom:30px;
+}
+
+.all-video
+{
+    text-align: center;
+    margin-bottom: 50px;
+
+}
+
+.video{
+    display: inline-block;
+}
+/*--------------footer--------------*/
+footer{
+    position:relative;
+    width:100%;
+    height:auto;
+    z-index:999;
+    background:rgb(0, 0, 0);
+    padding: 2em 2em 4em 3em;
+    color:white;
+}
+footer .container
+{
+    width:100%;
+    display:grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    grid-gap:2em;
+}
+footer .aboutus a{
+    color:rgb(136,138, 148);
+    transition:0.5s;
+}
+footer .aboutus a:hover{
+    color:#ffffff;
+}
+footer .container h2{
+    font-weight: 400;
+    margin-bottom: 1em;
+}
+footer .container .socials
+{
+    margin-top:2em;
+    display:grid;
+    grid-template-columns: repeat(4,52px);
+    grid-gap:10px;
+}
+footer .container .socials li
+{
+    list-style: none;
+}
+footer .container .socials li a
+{
+    color:white;
+    display:inline-block;
+    width:50px;
+    height:50px;
+    background: rgb(0, 0, 0);
+    border-radius:50%;
+    display:grid;
+    align-content: center;
+    justify-content:center;
+    transition:0.5s;
+}
+footer .container .socials li a:hover
+{
+    background:#a50000;
+}
+footer li{
+    list-style: none;
+    margin-bottom: 0.7em;
+}
+footer li a
+{
+    color:rgb(136,138, 148);
+    display: inline-block;
+    transition:0.5s;
+    text-decoration: none;
+}
+footer li a:hover
+{
+    color:#ffffff;
+}
+.info li{
+    display:grid;
+    grid-template-columns: 30px 1fr;
+    list-style: none;
+}
+/*--------------Адаптация--------------*/
+@media (max-width: 1024px){
+    footer{
+        padding: 40px;
+    }
+    footer .container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .advantage-card__text{
+        font-size: 22px;
+        line-height: 26px;
+    }
+}
+@media (max-width: 768px){
+    footer .container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    body.disabled{
+        overflow: hidden;
+    }
+    .icon{
+        display: block;
+    }
+    .icon.hide{
+        display: none;
+    }
+    .navbar .menu-list{
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0px;
+        display: block;
+        padding: 40px 0;
+        text-align: center;
+        background: rgb(0, 0, 0);
+        transition: all 0.3s ease;
+    }
+    .navbar.show .menu-list{
+        left: 0%;
+    }
+    .navbar .menu-list li{
+        margin-top: 45px;
+    }
+    .navbar .menu-list li a{
+        font-size: 23px;
+        margin-left: -100%;
+        transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+    .navbar.show .menu-list li a{
+        margin-left: 0px;
+    }
+    .advantage-card__text{
+        font-size: 18px;
+        line-height: 22px;
+    }
+}
